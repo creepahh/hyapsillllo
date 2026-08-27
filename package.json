@@ -2,6 +2,6 @@
   "name": "image-popup-extension",
   "private": true,
   "scripts": {
-    "build": "rm -rf dist && mkdir -p dist/hyapsilo-notes && cp background.js content.js hyapsiloimg.png manifest.json popup.html README.md dist/hyapsilo-notes/ && cd dist/hyapsilo-notes && zip -qr ../hyapsilo-notes.zip ."
+    "build": "rm -rf dist && mkdir -p dist/hyapsilo-notes && cp background.js content.js hyapsiloimg.png manifest.json popup.html popup.js README.md dist/hyapsilo-notes/ && cd dist/hyapsilo-notes && zip -qr ../hyapsilo-notes.zip ."
   }
 }

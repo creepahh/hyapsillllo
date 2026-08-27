@@ -14,8 +14,8 @@
     html,
     body {
       margin: 0;
-      width: 100%;
-      height: 100%;
+      width: 420px;
+      height: 560px;
       overflow: hidden;
       font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
       background: #ffdce8;
@@ -124,25 +124,7 @@
 
   </main>
 
-  <script>
-    const notes = document.getElementById("notes");
-
-    // Load saved note
-    chrome.storage.local.get(["savedNote"], (result) => {
-      if (result.savedNote) {
-        notes.value = result.savedNote;
-      }
-
-      notes.focus();
-    });
-
-    // Save automatically while typing
-    notes.addEventListener("input", () => {
-      chrome.storage.local.set({
-        savedNote: notes.value
-      });
-    });
-  </script>
+  <script src="popup.js"></script>
 
 </body>
 </html>
