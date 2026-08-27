@@ -1,0 +1,24 @@
+{
+  "manifest_version": 3,
+  "name": "Hyapsilo Notes",
+  "version": "1.0",
+  "description": "A simple pink notes popup.",
+  "permissions": [
+    "storage"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "commands": {
+    "open-notes": {
+      "suggested_key": {
+        "default": "Ctrl+Shift+H",
+        "mac": "Command+Shift+H"
+      },
+      "description": "Open notes"
+    }
+  },
+  "action": {
+    "default_title": "Hyapsilo Notes"
+  }
+}
