@@ -11,12 +11,17 @@ Notes persist after closing the modal.
 Reopen the notes and your previous text is still there.
 Long notes scroll inside the writing area.
 Avatar can briefly hover out from the side while typing.
-Files
+
+
+## Files
+
+```text
 Hyapsilo Notes/
 ├── manifest.json
 ├── background.js
 ├── content.js
 └── hyapsiloimg.png
+
 
 Setup
 Open Chrome.
