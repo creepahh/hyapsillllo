@@ -3,12 +3,27 @@
   "name": "Hyapsilo Notes",
   "version": "1.0",
   "description": "A small floating notes app.",
+
   "permissions": [
     "storage"
   ],
+
+  "icons": {
+    "16": "hyapsiloimg.png",
+    "32": "hyapsiloimg.png",
+    "48": "hyapsiloimg.png",
+    "128": "hyapsiloimg.png"
+  },
+
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "Hyapsilo Notes"
+  },
+
   "background": {
     "service_worker": "background.js"
   },
+
   "commands": {
     "open-notes": {
       "suggested_key": {
@@ -18,10 +33,15 @@
       "description": "Open Hyapsilo Notes"
     }
   },
+
   "content_scripts": [
     {
-      "matches": ["<all_urls>"],
-      "js": ["content.js"],
+      "matches": [
+        "<all_urls>"
+      ],
+      "js": [
+        "content.js"
+      ],
       "run_at": "document_idle"
     }
   ]
