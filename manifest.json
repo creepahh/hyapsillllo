@@ -2,7 +2,7 @@
   "manifest_version": 3,
   "name": "Hyapsilo Notes",
   "version": "1.0",
-  "description": "A simple pink notes popup.",
+  "description": "A small floating notes app.",
   "permissions": [
     "storage"
   ],
@@ -15,10 +15,14 @@
         "default": "Ctrl+Shift+H",
         "mac": "Command+Shift+H"
       },
-      "description": "Open notes"
+      "description": "Open Hyapsilo Notes"
     }
   },
-  "action": {
-    "default_title": "Hyapsilo Notes"
-  }
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"],
+      "run_at": "document_idle"
+    }
+  ]
 }
