@@ -1,6 +1,13 @@
 # Hyapsilo Notes
 
+[![CI](https://github.com/creepahh/hyapsillllo/actions/workflows/ci.yml/badge.svg)](https://github.com/creepahh/hyapsillllo/actions/workflows/ci.yml)
+[![Download](https://img.shields.io/badge/download-hyapsilo--notes.zip-blue)](https://github.com/creepahh/hyapsillllo/releases/latest/download/hyapsilo-notes.zip)
+
 A tiny floating notes widget for Chrome. Press a shortcut, jot something down, and get back to what you were doing — the note autosaves and follows you everywhere.
+
+## Download
+
+**[Download hyapsilo-notes.zip](https://github.com/creepahh/hyapsillllo/releases/latest/download/hyapsilo-notes.zip)** — always the latest build.
 
 ## Features
 
@@ -15,7 +22,7 @@ A tiny floating notes widget for Chrome. Press a shortcut, jot something down, a
 
 ### From the release zip
 
-1. Download the zip from the [latest release](https://github.com/creepahh/hyapsillllo/releases/latest)
+1. [Download the latest zip](https://github.com/creepahh/hyapsillllo/releases/latest/download/hyapsilo-notes.zip)
 2. Unzip it somewhere permanent
 3. Open `chrome://extensions` in Chrome
 4. Turn on **Developer mode** (toggle in the top-right corner)
@@ -46,4 +53,14 @@ Zero dependencies, so there's no install step. Optionally create a distribution 
 npm run build
 ```
 
-This produces `dist/hyapsilo-notes/` (load this in **Load unpacked**) and a shareable `dist/hyapsilo-notes.zip`.
+This produces the extension files in `dist/` (load this in **Load unpacked**) and a shareable `dist/hyapsilo-notes.zip`.
+
+## Releases
+
+CI ([`.github/workflows/ci.yml`](.github/workflows/ci.yml)) runs on every push and pull request — it syntax-checks the JavaScript, validates that `manifest.json` only references files that exist, and builds the zip. Pushing a version tag publishes a release with the zip attached:
+
+```sh
+git tag v1.0.1 && git push --tags
+```
+
+The **Download** button above and the `releases/latest/download` link always point to the newest tagged build.
