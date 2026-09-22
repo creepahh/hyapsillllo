@@ -347,6 +347,19 @@ function saveNote() {
 }
 
 
+// Keep open widgets in other tabs in sync
+chrome.storage.onChanged.addListener((changes, areaName) => {
+  if (areaName !== "local") return;
+  if (!changes[STORAGE_KEY] || !notesTextarea) return;
+
+  const newValue = changes[STORAGE_KEY].newValue || "";
+
+  if (notesTextarea.value !== newValue) {
+    notesTextarea.value = newValue;
+  }
+});
+
+
 // Listen for keyboard shortcut
 chrome.runtime.onMessage.addListener((message) => {
   if (message.type === "TOGGLE_NOTES") {

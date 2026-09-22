@@ -1,8 +1,8 @@
 const notes = document.getElementById("notes");
 
-chrome.storage.local.get(["savedNote"], (result) => {
-  if (result.savedNote) {
-    notes.value = result.savedNote;
+chrome.storage.local.get(["hyapsiloSavedNote"], (result) => {
+  if (result.hyapsiloSavedNote) {
+    notes.value = result.hyapsiloSavedNote;
   }
 
   notes.focus();
@@ -11,6 +11,6 @@ chrome.storage.local.get(["savedNote"], (result) => {
 
 notes.addEventListener("input", () => {
   chrome.storage.local.set({
-    savedNote: notes.value
+    hyapsiloSavedNote: notes.value
   });
 });

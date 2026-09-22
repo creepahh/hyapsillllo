@@ -3,9 +3,17 @@
   "name": "Hyapsilo Notes",
   "version": "1.0",
   "description": "A small floating notes app.",
+  "version": "1.0.0",
 
   "permissions": [
     "storage"
+  ],
+
+  "web_accessible_resources": [
+    {
+      "resources": ["hyapsiloimg.png"],
+      "matches": ["<all_urls>"]
+    }
   ],
 
   "icons": {
