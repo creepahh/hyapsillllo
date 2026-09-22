@@ -3,7 +3,7 @@
 [![CI](https://github.com/creepahh/hyapsillllo/actions/workflows/ci.yml/badge.svg)](https://github.com/creepahh/hyapsillllo/actions/workflows/ci.yml)
 [![Download](https://img.shields.io/badge/download-hyapsilo--notes.zip-blue)](https://github.com/creepahh/hyapsillllo/releases/latest/download/hyapsilo-notes.zip)
 
-A tiny floating notes widget for Chrome. Press a shortcut, jot something down, and get back to what you were doing — the note autosaves and follows you everywhere.
+A tiny floating notes widget for Chrome. Press a shortcut, jot something down, and get back to what you were doing, the note autosaves and follows you everywhere.
 
 ## Download
 
